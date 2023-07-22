@@ -1,0 +1,104 @@
+<configs>
+
+    <append xpath="/blocks/block[@name='treeCactus01']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus02']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus03']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus04']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus05']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus06']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <insertAfter xpath="/blocks/block[@name='treeCactus06']">
+
+        <block name="CactusRegrowMaster">
+            <property name="Class" value="ModelTree"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="IsPlant" value="true"/>
+            <!-- Adjust the following time to respawn (real-world minutes of gameplay) -->
+            <!-- EG:  2 days given 60-min game days = 120, 2 days given 90-min = 180-->
+            <property name="PlantGrowing.GrowthRate" value="270"/>
+	        <property name="PlantGrowing.Next" value="TreeCactusRandomHelper"/>
+	        <property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+	        <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
+	        <property name="Texture" value="201,306,371,201,306,371"/>
+	        <property name="CanPlayersSpawnOn" value="false"/>
+
+	        <property name="ImposterExclude" value="true"/>
+	        <property name="ImposterDontBlock" value="true"/>
+	        <property name="LightOpacity" value="0"/>
+	        <property name="WaterFlow" value="permitted"/>
+	        <property name="ParticleOnDeath" value="treeGib_burnt"/>
+	        <property name="OnlySimpleRotations" value="true"/>
+	        <property name="IsDistantDecoration" value="true"/>
+	        <property name="IsTerrainDecoration" value="true"/>
+	        <property name="ActivationDistance" value="12"/>
+	        <property name="SortOrder1" value="D001"/>
+	        <property name="SortOrder2" value="0000"/>
+	        <property name="BlockTag" value="TreeTrunk"/>
+	        <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
+        </block>
+
+        <block name="TreeCactusRandomSpawner">
+	        <property name="CreativeMode" value="None"/>
+	        <property name="PlantGrowing.Next" value="TreeCactusRandomHelper"/>
+	        <property name="Extends" value="CactusRegrowMaster" />
+	        <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
+	        <property name="Texture" value="201,306,371,201,306,371"/>
+	        <property name="SortOrder1" value="D001"/>
+	        <property name="SortOrder2" value="0001"/>
+	        <drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+	        <drop event="Destroy" count="0"/>
+	        <drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	        <property name="MaxDamage" value="100"/>
+            <property name="Model" value="@:Entities/Trees/Saguaro_Cactus_13Prefab.prefab"/>
+        </block>
+
+        <block name="TreeCactusRandomHelper">
+	        <property name="Extends" value="treeCactus01" />
+	        <property name="CreativeMode" value="Dev"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+	        <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
+	        <property name="CustomIconTint" value="FF8080"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="SortOrder1" value="D001"/>
+	        <property name="SortOrder2" value="0002"/>
+	        <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
+	        <property name="Damage" value="3"/>
+	        <property name="IsPlant" value="true"/>
+	        <property name="CanPlayersSpawnOn" value="false"/>
+	        <property name="ImposterDontBlock" value="true"/>
+	        <property name="WaterFlow" value="permitted"/>
+	        <property name="OnlySimpleRotations" value="true"/>
+	        <property name="BigDecorationRadius" value="2"/>
+	        <property name="IsDistantDecoration" value="true"/>
+	        <property name="IsTerrainDecoration" value="true"/>
+	        <property name="ActivationDistance" value="10"/>
+	        <drop event="Harvest" name="resourceYuccaFibers" count="10" tag="oreWoodHarvest"/>
+	        <drop event="Destroy" name="foodCropYuccaFruit" count="3"/>
+	        <drop event="Destroy" name="resourceYuccaFibers" count="5"/>
+	        <property name="SortOrder1" value="B909"/>
+	        <property name="SortOrder2" value="0000"/>
+	        <property name="BlockTag" value="TreeTrunk"/>
+	        <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
+	        <property name="DescriptionKey" value="TreeCactusRandomHelperDesc"/>
+        </block>
+
+    </insertAfter>
+
+</configs>
