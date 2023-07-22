@@ -1,4 +1,4 @@
-# 7DaysToDie_A21_Mods
+# 7 Days To Die A21.x Mods
 Custom mods for my 7 Days To Die server
 
 [I_Robot73-Regrow_Boulders](https://github.com/irobot73/7DaysToDie_A21_Mods/tree/main/I_Robot73-Regrow_Boulders)
