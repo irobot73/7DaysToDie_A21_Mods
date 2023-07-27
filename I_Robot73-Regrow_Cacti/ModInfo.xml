@@ -2,7 +2,7 @@
 <xml>
 	<Name value="I_Robot73_Regrow_Cacti"/>
 	<DisplayName value="Regrow Cacti (Robot Edition)" />
-	<Description value="Regrows (random) desert flora after cacto are broken-down and harvested."/>
+	<Description value="Regrows (random) desert flora after cacti are broken-down and harvested."/>
 	<Author value="I_Robot73"/>
 	<Version value="21.1.0"/>
 	<Website value="https://discord.gg/DEU5wmMvSn/"/>
