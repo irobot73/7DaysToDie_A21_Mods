@@ -15,3 +15,5 @@ Custom, SERVER-side mods for any 7 Days To Die server
 
 [I_Robot73-TradersShowPoiNames](https://github.com/irobot73/7DaysToDie_A21_Mods/tree/main/I_Robot73-TradersShowPoiNames)
 * Changes how the trader quests are presented
+
+Come test 'em out:  [Discord for my 7D2D Server](https://discord.gg/DEU5wmMvSn)
