@@ -12,6 +12,8 @@
             <!-- Set time below.  EX:  Given 2 Days at 60-min days, use '120' -->
             <property name="PlantGrowing.GrowthRate" value="270"/>
             <property name="PlantGrowing.Next" value="cntBirdnest"/>
+            <!-- If FertileLevel is higher than the fertile_level of the block directly below then the upgrade will not occur. -->
+	        <property name="PlantGrowing.FertileLevel" value="0"/>
 	        <property name="SortOrder1" value="B910"/>
 	        <property name="SortOrder2" value="0007"/>
 	        <property name="Texture" value="201,306,371,201,306,371"/>
