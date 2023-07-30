@@ -2,6 +2,7 @@
 
     <append xpath="/blocks">
 
+        <!-- Once a nest is destroyed/harvested, switch to one of the 'grass' blocks to hide the respawn -->
         <block name="pltBirdnestRespawn">
             <property name="Class" value="PlantGrowing"/>
             <property name="Collide" value="melee,bullet,arrow,rocket"/>
@@ -23,8 +24,12 @@
 
     </append>
 
-    <insertAfter xpath="/blocks/block[@name='cntBirdnest']/property[@name='StabilitySupport']">
+    <!-- Add the downgrade (respawn) block to the 'Birdnest' block -->
+    <insertAfter xpath="//block[@name='cntBirdnest']/property[@name='StabilitySupport']">
 	    <property name="DowngradeBlock" value="pltBirdnestRespawn"/>
     </insertAfter>
+
+    <!-- Make nest harvesting/destruction a BIT less noisy (REF:  'materials.xml') -->
+    <set xpath="//block[@name='cntBirdnest']/property[@name='Material']/@value">Mtallgrass</set>
 
 </configs>
