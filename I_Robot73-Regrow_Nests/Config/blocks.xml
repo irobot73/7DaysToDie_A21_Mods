@@ -18,8 +18,9 @@
             <property name="PlantGrowing.Next" value="cntBirdnest"/>
             <!-- If FertileLevel is higher than the fertile_level of the block directly below then the upgrade will not occur. -->
 	        <property name="PlantGrowing.FertileLevel" value="0"/>
-	        <property name="SortOrder1" value="B910"/>
-	        <property name="SortOrder2" value="0007"/>
+            <!-- (per 'XML.txt': A (outdoor), 7 (Resources), 3 (Grass), X (Resource)) -->
+	        <property name="SortOrder1" value="A73X"/>
+	        <property name="SortOrder2" value="0000"/>
             <!-- Omitting 'Texture'' will default to the 'snowy' variants via parent -->
 	        <property name="Texture" value="201,306,371,201,306,371"/>
         </block>

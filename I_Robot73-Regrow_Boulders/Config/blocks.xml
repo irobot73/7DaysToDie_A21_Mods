@@ -24,7 +24,7 @@
             <!-- EG:  2 days given 60-min game days = 120, 2 days given 90-min = 180-->
             <property name="PlantGrowing.GrowthRate" value="270"/>
             <property name="PlantGrowing.Next" value="rockResource"/>
-	        <property name="PlantGrowing.FertileLevel" value="1"/>
+	        <property name="PlantGrowing.FertileLevel" value="0"/>
             <property name="StabilitySupport" value="false"/>
             <property name="PlaceAsRandomRotation" value="true"/>
             <property name="CanPickup" value="true" param1="resourceRockSmall"/>
